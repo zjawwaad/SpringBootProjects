@@ -1,0 +1,26 @@
+package com.zaynah.savetravels.controllers;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.zaynah.savetravels.services.ExpenseService;
+
+@Controller
+@RestController("/expenses")
+public class ExpenseController {
+	
+	public final ExpenseService expenseServ;
+	public ExpenseController(ExpenseService expenseServ) {
+		this.expenseServ = expenseServ;
+		// TODO Auto-generated constructor stub
+	}
+	
+	@GetMapping("/all")
+	public String allExpenses(Model model) {
+		model.addAttribute("allExpenses", expenseServ.getAll());
+		return null;
+	}
+
+}

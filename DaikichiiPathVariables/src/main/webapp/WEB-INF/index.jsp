@@ -1,0 +1,36 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!-- New line below to use the JSP Standard Tag Library -->
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core"%>
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Omikuji</title>
+</head>
+<body>
+    <h3>Send an Omikuji</h3>
+    <form action='/processForm' method='POST'>
+	<label>Pick a number 5-25:</label>
+    	<input type="number" min="5" max="25" name='number'>
+	<label>Enter the name of any real person:</label>
+    	<input type='text' name='celebrity'>
+   	<label>Enter the name of any City:</label>
+    	<input type='text' name='city'>
+   	<label>Enter the name of any Profession:</label>
+    	<input type='text' name='profession'>
+   	<label>Enter the name of any living thing:</label>
+    	<input type='text' name='biotic'>
+   	<label>Say something nice to someone:</label>
+    	<input type='text' name='compliment'>
+    <p>Send and Show to a Friend</p>
+    	<input type='submit' value='Send'>
+    </form>
+
+
+
+	
+</body>
+</html>

@@ -1,0 +1,49 @@
+package com.zaynah.savetravels.controllers;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.zaynah.savetravels.models.Expense;
+import com.zaynah.savetravels.services.ExpenseService;
+
+@Controller
+@RequestMapping("/expenses")
+public class ExpenseController {
+	
+	public final ExpenseService expenseServ;
+	public ExpenseController(ExpenseService expenseServ) {
+		this.expenseServ = expenseServ;
+		// TODO Auto-generated constructor stub
+	}
+	
+	@GetMapping("/all")
+	public String allExpenses(Model model) {
+		model.addAttribute("allExpenses", expenseServ.getAll());
+		return "showAll.jsp";
+	}
+	
+	@GetMapping("/one/{id}")
+	public String oneExpense(@PathVariable("id") Long id, Model model) {
+		Expense oneExpense = expenseServ.findOne(id);
+		model.addAttribute("oneExpense", oneExpense);
+		return "oneExpense.jsp";
+	}
+
+	@GetMapping("/new")
+	public String newExpense() {
+		return "newExpense.jsp";
+	}
+
+
+	@PostMapping("/process")
+	public String processExpense(@RequestParam ("expenseName") String expenseName, @RequestParam("vendor") String vendor,@RequestParam("amount") Integer amount){
+		Expense newExpense = new Expense(expenseName, vendor, amount);
+		expenseServ.create(newExpense);
+	return "redirect:/";
+	}
+}

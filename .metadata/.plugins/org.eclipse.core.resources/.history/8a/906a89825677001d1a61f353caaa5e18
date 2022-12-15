@@ -1,0 +1,21 @@
+package com.zaynah.daikichii;
+
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+
+@RestController
+@RequestMapping("/daikichi")
+public class HomeController {
+@RequestMapping("")
+  public String index() { // 3
+          return "Hello Daikichi!";
+  }
+  
+  
+  @RequestMapping("/travel/{city}")
+  public String travel(@PathVariable("city") String city){
+  	return "Congratulations! You will soon travel to " + city;
+  }
+}

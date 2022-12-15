@@ -1,0 +1,9 @@
+package com.zaynah.savetravels.services;
+
+public class ExpenseService {
+
+	public ExpenseService() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

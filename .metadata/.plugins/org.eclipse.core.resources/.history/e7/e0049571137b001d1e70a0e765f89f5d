@@ -1,0 +1,9 @@
+package com.zaynah.savetravels.models;
+
+public class Expense {
+
+	public Expense() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

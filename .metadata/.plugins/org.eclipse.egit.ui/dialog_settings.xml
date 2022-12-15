@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="EGit.KnownHosts">
+		<item value="bitbucket.org"/>
+		<item value="git.eclipse.org"/>
+		<item value="github.com"/>
+	</list>
+	<list key="RepositorySelectionPage.UsedUris">
+		<item value="https://github.com/zjawwaad/SpringBootProjects.git"/>
+	</list>
+	<section name="org.eclipse.egit.ui.internal.staging.StagingView">
+		<item key="MAIN_SASH_FORM_ORIENTATION_VERTICAL" value="false"/>
+		<item key="HORIZONTAL_SASH_FORM_WEIGHT" value="500,500"/>
+		<item key="STAGING_SASH_FORM_WEIGHT" value="500,500"/>
+		<item key="sortItemState" value="false"/>
+	</section>
+	<section name="GitCommitMessageComponent">
+		<list key="/Users/zaynahjawwaad/git/SpringBootProjects/.git">
+			<item value="false"/>
+			<item value="zjawwaad &lt;zjawwaad@yahoo.com&gt;"/>
+			<item value="&#x0D;&#x0D;Change-Id: I0000000000000000000000000000000000000000&#x0D;"/>
+			<item value="zjawwaad &lt;zjawwaad@yahoo.com&gt;"/>
+			<item value="d92ff0c74d69b919bc3a2c1ebf4b13a46a59dc17"/>
+			<item value="0"/>
+			<item value="true"/>
+			<item value=""/>
+		</list>
+	</section>
+</section>

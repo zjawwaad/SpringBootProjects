@@ -1,0 +1,29 @@
+package com.zaynah.savetravels.controllers;
+
+import java.util.List;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.zaynah.savetravels.models.Expense;
+import com.zaynah.savetravels.services.ExpenseService;
+
+@RestController
+@RequestMapping("/api")
+public class ApiController {
+	
+	public final ExpenseService expenseServ;
+	
+
+	public ApiController(ExpenseService expenseServ) {
+		this.expenseServ = expenseServ;
+		// TODO Auto-generated constructor stub
+	}
+	
+	@GetMapping("/expenses")
+	public List<Expense> findAllExpenses(){
+		return expenseServ.getAll();
+	}
+
+}

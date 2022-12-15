@@ -1,0 +1,9 @@
+package com.zaynah.savetravels.controllers;
+
+public class ApiController {
+
+	public ApiController() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

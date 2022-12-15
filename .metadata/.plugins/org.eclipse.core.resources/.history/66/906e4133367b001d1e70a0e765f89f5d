@@ -1,0 +1,9 @@
+package com.zaynah.savetravels.controllers;
+
+public class ExpenseController {
+
+	public ExpenseController() {
+		// TODO Auto-generated constructor stub
+	}
+
+}
